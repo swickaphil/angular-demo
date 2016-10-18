@@ -30,12 +30,6 @@ body {
   transform: translate(-50%, 50%);
 }
 
-.ouLogo{
-  background: url('../images/OULogo.png') no-repeat;
-  width: 224px;
-  height: 44px;
-}
-
 .loading h3{
   text-align: center;
   color: #FFF;
