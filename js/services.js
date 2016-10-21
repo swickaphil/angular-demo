@@ -3,7 +3,7 @@ var key = '1023d877-621d-4d03-aa9a-df71222a0946';
 
 contactServices.factory('AddressList', ['$resource',
 	function($resource){
-		return $resource('http://front-end.oudemo.com/api/address/list/?apikey=:apikey', null, {
+		return $resource('https://front-end.oudemo.com/api/address/list/?apikey=:apikey', null, {
 			'get': {method:'GET', params:{apikey:key}, isArray:false}
 		});
 	}
@@ -16,17 +16,17 @@ contactServices.factory('AddressCreate', ['$http',
 
 		httpFactory.newContact = function (data){
 			data.apikey = key;
-			return $http.post('http://front-end.oudemo.com/api/address/new/', data);
+			return $http.post('https://front-end.oudemo.com/api/address/new/', data);
 		};
 
 		httpFactory.saveContact = function (data){
 			data.apikey = key;
-			return $http.post('http://front-end.oudemo.com/api/address/update/', data);
+			return $http.post('https://front-end.oudemo.com/api/address/update/', data);
 		};
 
 		httpFactory.deleteContact = function (data){
 			data.apikey = key;
-			return $http.post('http://front-end.oudemo.com/api/address/delete/', data);
+			return $http.post('https://front-end.oudemo.com/api/address/delete/', data);
 		};
 
 		return httpFactory;
